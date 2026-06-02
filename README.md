@@ -94,6 +94,132 @@ Developer → GitHub → Jenkins → Maven → Docker → Container Registry →
 
 ---
 
+## Project Implementation Steps 📌
+
+### Step 1: Create AWS IAM User
+
+* Create a dedicated IAM user
+* Enable Programmatic and Console Access
+* Assign required permissions
+* Configure AWS CLI
+
+### Step 2: Create Custom VPC
+
+* Create a VPC
+* Create Public and Private Subnets
+* Configure Internet Gateway
+* Configure Route Tables
+
+### Step 3: Launch EC2 Instance for Jenkins
+
+* Launch EC2 instance in Public Subnet
+* Configure Security Groups
+* Connect using SSH
+* Install Jenkins and required tools
+
+### Step 4: Install and Configure Jenkins
+
+* Start Jenkins service
+* Create admin account
+* Access Jenkins dashboard
+* Install required plugins
+
+### Step 5: Create IAM Roles for EKS
+
+* Create EKS Cluster Role
+* Create EKS Node Group Role
+* Attach required AWS policies
+* Configure role permissions
+
+### Step 6: Create Amazon EKS Cluster
+
+* Create EKS Cluster
+* Select custom VPC
+* Configure networking
+* Attach cluster role
+
+### Step 7: Create EKS Node Group
+
+* Create Managed Node Group
+* Select Node IAM Role
+* Configure scaling settings
+* Launch worker nodes
+
+### Step 8: Connect Environment to EKS
+
+* Configure kubectl access
+* Update kubeconfig
+* Verify cluster connectivity
+* Validate worker nodes
+
+### Step 9: Create GitHub Repository
+
+* Create public repository
+* Upload Java application source code
+* Add Kubernetes manifests
+* Organize project files
+
+### Step 10: Configure GitHub Credentials in Jenkins
+
+* Generate Personal Access Token
+* Add credentials in Jenkins
+* Configure repository access
+* Test GitHub integration
+
+### Step 11: Create Docker Image
+
+* Create Dockerfile
+* Build Docker image
+* Validate image creation
+* Prepare image for deployment
+
+### Step 12: Configure Container Registry
+
+* Login to Docker Hub
+* Tag Docker image
+* Push image to registry
+* Verify image availability
+
+### Step 13: Create Kubernetes Deployment Files
+
+* Create deployment.yaml
+* Create service.yaml
+* Define Deployments and Pods
+* Configure Services
+
+### Step 14: Create Jenkins Pipeline
+
+* Clone Repository
+* Build Application
+* Create Docker Image
+* Push Image to Docker Hub
+* Deploy to Amazon EKS
+
+### Step 15: Deploy Application to EKS
+
+* Deploy application using Kubernetes manifests
+* Create Pods and Services in Amazon EKS
+* Verify deployment status and running Pods
+* Access application through the exposed Service
+
+### Step 16: Enable Continuous Deployment
+
+* Configure Poll SCM in Jenkins
+* Monitor GitHub repository changes
+* Automatically trigger Jenkins pipeline
+* Deploy latest version to Amazon EKS
+
+---
+
+## Real Time Use Case 🏢
+
+A software company manages a Java-based e-commerce application where multiple developers continuously add new features, fix bugs, and release updates.
+
+Using the Cloud Native Delivery Platform, every code change pushed to GitHub automatically triggers the CI/CD pipeline. Jenkins builds the application, creates a Docker image, pushes it to Docker Hub, and deploys the latest version to Amazon EKS.
+
+This automation eliminates manual deployment tasks, accelerates software releases, and ensures that users always have access to the latest version of the application with minimal downtime.
+
+---
 ## Learning Outcomes 📚
 
 * CI/CD Pipeline Implementation
