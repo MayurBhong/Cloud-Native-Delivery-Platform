@@ -220,6 +220,18 @@ Using the Cloud Native Delivery Platform, every code change pushed to GitHub aut
 This automation eliminates manual deployment tasks, accelerates software releases, and ensures that users always have access to the latest version of the application with minimal downtime.
 
 ---
+
+## Common Challenges ⚠️
+
+* Incorrect IAM permissions causing access denied errors
+* EKS cluster connectivity and authentication issues
+* Docker image push failures to Docker Hub
+* Jenkins pipeline build and deployment failures
+* Kubernetes Pods stuck in Pending or CrashLoopBackOff state
+* Service misconfiguration preventing application access
+* Resource limitations on EKS worker nodes
+
+---
 ## Learning Outcomes 📚
 
 * CI/CD Pipeline Implementation
@@ -232,6 +244,11 @@ This automation eliminates manual deployment tasks, accelerates software release
 
 ---
 
-## Project Goal 🎯
+## Project Summary 📌
 
-To build a cloud-native application delivery platform that automates software deployment from source code commit to Kubernetes deployment on AWS using industry-standard DevOps tools and practices.
+Cloud Native Delivery Platform is an end-to-end DevOps project that automates the build, containerization, and deployment of Java applications on AWS. The platform integrates GitHub, Jenkins, Docker, Kubernetes, and Amazon EKS to create a fully automated CI/CD pipeline.
+
+The project demonstrates modern DevOps practices by automating code integration, application builds, Docker image creation, image management, and Kubernetes deployments. It utilizes AWS services such as IAM, VPC, EC2, and EKS to provide a secure, scalable, and reliable cloud environment.
+
+This implementation enables continuous application delivery with minimal manual intervention while improving deployment consistency, scalability, and availability. It provides hands-on experience in DevOps automation, container orchestration, Kubernetes, and AWS cloud infrastructure.
+
