@@ -1,4 +1,4 @@
-# Cloud Native Delivery Platform ☁️
+# Cloud Native Java CI/CD Platform on AWS EKS ☁️
 
 ### End-to-End CI/CD Automation for Java Applications on AWS EKS
 
